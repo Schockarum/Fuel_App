@@ -4,7 +4,8 @@
 //
 //  Created by Luis Mauricio Esparza Vazquez on 12/01/22.
 //
-
+/// Vista para jugar con SwiftUI
+// TODO: No olvidar borrarla antes de intentar publicar :p
 import SwiftUI
 
 
