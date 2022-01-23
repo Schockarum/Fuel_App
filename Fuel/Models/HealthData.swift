@@ -9,8 +9,8 @@ import Foundation
 
 struct HealthData {
     var fatPercentage: Float
-    var weight: Float
     var hoursOfExcercise: Float
+    var weight: Float
     var leanBodyMass: Float {
         get {
             let lbm = ((1-fatPercentage/100)*weight)
@@ -30,7 +30,7 @@ struct HealthData {
         }
     }
 
-    init(weight w: Float = 0.0, fatPercentage fp: Float = 0.0, hoursOfExcercisePerWeek hours: Float = 0.0){
+    init(weight w: Float = 50.0, fatPercentage fp: Float = 15.0, hoursOfExcercisePerWeek hours: Float = 1.0){
         weight = w
         fatPercentage = fp
         hoursOfExcercise = hours
