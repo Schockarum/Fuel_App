@@ -6,12 +6,11 @@
 //
 
 import Foundation
-import UIKit
 
 struct HealthData {
     var fatPercentage: Float
     var weight: Float
-    var hoursOfExcercisePerWeek: Float
+    var hoursOfExcercise: Float
     var leanBodyMass: Float {
         get {
             let lbm = ((1-fatPercentage/100)*weight)
@@ -26,14 +25,14 @@ struct HealthData {
     }
     var totalDailyEnergyExpenditure: Int {
         get {
-            let tdee = basalMetabolicRate * hoursOfExcercisePerWeek
-            return Int(tdee)
+            let tdee = basalMetabolicRate * hoursOfExcercise
+            return Int(round(tdee))
         }
     }
 
-    init(weight w: Float, fatPercentage fp: Float, hoursOfExcercisePerWeek hours: Float){
+    init(weight w: Float = 0.0, fatPercentage fp: Float = 0.0, hoursOfExcercisePerWeek hours: Float = 0.0){
         weight = w
         fatPercentage = fp
-        hoursOfExcercisePerWeek = hours
+        hoursOfExcercise = hours
     }
 }

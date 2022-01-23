@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoreUser" representedClassName="CoreUser" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="toHealthData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreUserHealthData" inverseName="toUser" inverseEntity="CoreUserHealthData"/>
+    </entity>
+    <entity name="CoreUserHealthData" representedClassName="CoreUserHealthData" syncable="YES" codeGenerationType="class">
+        <attribute name="fatPercentage" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="hoursOfExcercise" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="toUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreUser" inverseName="toHealthData" inverseEntity="CoreUser"/>
+    </entity>
+    <elements>
+        <element name="CoreUser" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="CoreUserHealthData" positionX="-54" positionY="9" width="128" height="89"/>
+    </elements>
+</model>

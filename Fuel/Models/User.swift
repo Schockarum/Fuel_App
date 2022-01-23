@@ -6,36 +6,40 @@
 //
 
 import Foundation
-import UIKit
 
 struct User {
-    var firstName:  String
-    var middleName: String
-    var lastName:   String
-    var age:        Int
-    var gender:     Gender
+    var name: String
+    var age: Int
+    var gender: Gender
     var healthData: HealthData
     
-    init(firstName          name:    String,
-         lastName           last:    String,
-         age                _age:    Int,
-         middleName         middle:  String  = "",
-         fatPercentage      fat:     Float   = 0.0,
-         weight             _weight: Float   = 0.0,
-         hoursOfExcercise   hours:   Float   = 1.0,
-         gender             _gender: Gender  = Gender.Unspecified) {
-        firstName   = name
-        middleName  = middle
-        lastName    = last
-        age         = _age
-        healthData  = HealthData(weight: _weight, fatPercentage: fat, hoursOfExcercisePerWeek: hours)
-        gender      = _gender
+    init(name _name: String = "John Doe", age _age: Int = 15, healthData _healthData: HealthData = HealthData()){
+        name = _name
+        age = _age
+        gender = Gender.Unspecified
+        healthData = _healthData
     }
 }
 
-enum Gender{
-    case Male
-    case Female
-    case NonBinary
-    case Unspecified
+enum Gender: String, CaseIterable, Identifiable {
+    case Male = "Male"
+    case Female = "Female"
+    case NonBinary = "Non Binary"
+    case Unspecified = "Unspecified"
+    
+    var id: String { self.rawValue}    
+//    func description() -> String {
+//        var desc = "Unknown"
+//        switch self {
+//        case .Male:
+//            desc = "Male"
+//        case .Female:
+//            desc = "Female"
+//        case .NonBinary:
+//            desc = "Non Binary"
+//        case .Unspecified:
+//            desc = "Unspecified"
+//        }
+//        return desc
+//    }
 }

@@ -134,7 +134,7 @@ struct IconsView: View {
 /// INSTANCIADOR DEL PREVIEW
 struct TextfulView_Previews: PreviewProvider {
     static var previews: some View {
-        //TextfulView()
+//        TextfulView()
         //ShapingView()
 //        ColorView()
         IconsView()
