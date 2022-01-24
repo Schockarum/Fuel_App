@@ -16,7 +16,7 @@ struct MainTabView: View {
                           systemImage:"waveform.path.ecg.rectangle")
                 }
             
-            HealthDataView()
+            UserProfileView()
                 .tabItem
             {
                 Label("Health Data",

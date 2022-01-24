@@ -15,7 +15,7 @@
 		7D745B5427991B6B001B0131 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D745B5327991B6B001B0131 /* User.swift */; };
 		7D9B4C51278FE5600010832A /* TextfulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B4C50278FE5600010832A /* TextfulView.swift */; };
 		7DFC389027990BFA00039203 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFC388F27990BFA00039203 /* MainTabView.swift */; };
-		7DFC389227990D2A00039203 /* HealthDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFC389127990D2A00039203 /* HealthDataView.swift */; };
+		7DFC389227990D2A00039203 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFC389127990D2A00039203 /* UserProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		7D745B5327991B6B001B0131 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7D9B4C50278FE5600010832A /* TextfulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfulView.swift; sourceTree = "<group>"; };
 		7DFC388F27990BFA00039203 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		7DFC389127990D2A00039203 /* HealthDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataView.swift; sourceTree = "<group>"; };
+		7DFC389127990D2A00039203 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				7D269698278E96C10062D495 /* TargetDataView.swift */,
-				7DFC389127990D2A00039203 /* HealthDataView.swift */,
+				7DFC389127990D2A00039203 /* UserProfileView.swift */,
 				7DFC388F27990BFA00039203 /* MainTabView.swift */,
 				7D9B4C50278FE5600010832A /* TextfulView.swift */,
 				7D269696278E96C10062D495 /* FuelApp.swift */,
@@ -173,7 +173,7 @@
 				7D269697278E96C10062D495 /* FuelApp.swift in Sources */,
 				7D745B5227991618001B0131 /* HealthData.swift in Sources */,
 				7DFC389027990BFA00039203 /* MainTabView.swift in Sources */,
-				7DFC389227990D2A00039203 /* HealthDataView.swift in Sources */,
+				7DFC389227990D2A00039203 /* UserProfileView.swift in Sources */,
 				7D745B5427991B6B001B0131 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
