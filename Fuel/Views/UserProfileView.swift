@@ -8,25 +8,24 @@
 import SwiftUI
 
 struct UserProfileView: View {
-    @State var currentUser: User = User()
-    let frameWidth: CGFloat = 80.0
-    let frameHeight: CGFloat = 50.0
+    @State private var currentUser: User = User()
+    let screenWidth: CGFloat = UIScreen.main.bounds.width
+    let screenHeight: CGFloat = UIScreen.main.bounds.height
     
     var body: some View {
         ScrollView {
-            VStack {
+            GeometryReader { geometry in
                 // MARK: - Banner
                 Image("Banner")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(height: 200)
+                    .frame(width: geometry.size.width,
+                           height: geometry.size.height + geometry.frame(in: .global).minY)
                     .clipped()
-                    .overlay {
-                        Rectangle().stroke(.white, lineWidth: 5)
-                    }
-                //                .ignoresSafeArea()
-                //                .offset(y: -51)
-                    .padding(.bottom)
+                    .offset(y: -geometry.frame(in: .global).minY) //Paralax deja pegada la imagen a la parte superior
+            }
+            .frame(width: screenWidth, height: screenHeight/4.8)
+            VStack (alignment: .leading){
                 // MARK: - Foto de Perfil y Nombre
                 HStack {
                     Image("ProfilePic")
@@ -35,15 +34,15 @@ struct UserProfileView: View {
                         .frame(width: 100, height: 100)
                         .clipShape(Circle())
                         .overlay{
-                            Circle().stroke(.white, lineWidth: 5)
+                            Circle().stroke(.clear , lineWidth: 5)
                         }
+                        .shadow(radius: 5)
                         .padding(.leading)
                     VStack(alignment: .leading) {
                         Text("Shortie ⚡️")
-                            .font(.largeTitle)
+                            .font(.title)
                             .fontWeight(.medium)
                             .minimumScaleFactor(0.5)
-                            .frame(height: 30)
                             .padding([.top, .trailing])
                         Text("Dripping with style")
                             .font(.subheadline)
@@ -70,6 +69,14 @@ struct UserProfileView: View {
                     Text(String(format:"%.2f Cal",currentUser.healthData.getCalorieTotal()))
                         .font(.system(size: 30, weight: .bold, design: .rounded))
                         .padding([.leading, .bottom, .trailing])
+                    Picker("Phase", selection: $currentUser.healthData.dietObjective) {
+                        ForEach(DietObjective.allCases) { objective in
+                            Text(objective.rawValue.capitalized).tag(objective)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .padding()
+
                     HStack {
                         Spacer()
                         VStack {
@@ -94,7 +101,7 @@ struct UserProfileView: View {
                     Divider()
                     // MARK: - Datos del Usuario
                     HStack {
-                        Text("Current Data")
+                        Text("User Data")
                             .font(.system(size: 25, weight: .semibold, design: .rounded))
                             .fontWeight(.medium)
                             .padding([.leading, .bottom])
@@ -127,10 +134,20 @@ struct UserProfileView: View {
                         }
                         Spacer()
                     }
+                    Text("Hours of Excercise per Week")
+                        .fontWeight(.bold)
+                        .padding(.top)
+                    Picker("", selection: $currentUser.healthData.hoursOfExcercise) {
+                        ForEach(1..<7, id:\.self) { hour in
+                            Text("\(hour)").tag(hour)
+                        }
+                    }
+                    .pickerStyle(.automatic)
                 }
                 Spacer()
             }
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 

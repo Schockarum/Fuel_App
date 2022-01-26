@@ -9,20 +9,7 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        TabView{
-            TargetDataView()
-                .tabItem{
-                    Label("Target",
-                          systemImage:"waveform.path.ecg.rectangle")
-                }
-            
-            UserProfileView()
-                .tabItem
-            {
-                Label("Health Data",
-                      systemImage: "heart.text.square")
-            }
-        }
+        UserProfileView()
     }
 }
 

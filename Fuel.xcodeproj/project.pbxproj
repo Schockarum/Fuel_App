@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7D269697278E96C10062D495 /* FuelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D269696278E96C10062D495 /* FuelApp.swift */; };
-		7D269699278E96C10062D495 /* TargetDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D269698278E96C10062D495 /* TargetDataView.swift */; };
 		7D26969B278E96C10062D495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D26969A278E96C10062D495 /* Assets.xcassets */; };
 		7D26969E278E96C10062D495 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D26969D278E96C10062D495 /* Preview Assets.xcassets */; };
 		7D745B5227991618001B0131 /* HealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D745B5127991618001B0131 /* HealthData.swift */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		7D269693278E96C10062D495 /* Fuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D269696278E96C10062D495 /* FuelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelApp.swift; sourceTree = "<group>"; };
-		7D269698278E96C10062D495 /* TargetDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDataView.swift; sourceTree = "<group>"; };
 		7D26969A278E96C10062D495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D26969D278E96C10062D495 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7D745B5127991618001B0131 /* HealthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthData.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 		7D9B4C52278FE56F0010832A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7D269698278E96C10062D495 /* TargetDataView.swift */,
 				7DFC389127990D2A00039203 /* UserProfileView.swift */,
 				7DFC388F27990BFA00039203 /* MainTabView.swift */,
 				7D9B4C50278FE5600010832A /* TextfulView.swift */,
@@ -168,7 +165,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D269699278E96C10062D495 /* TargetDataView.swift in Sources */,
 				7D9B4C51278FE5600010832A /* TextfulView.swift in Sources */,
 				7D269697278E96C10062D495 /* FuelApp.swift in Sources */,
 				7D745B5227991618001B0131 /* HealthData.swift in Sources */,
@@ -302,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Fuel/Preview Content\"";
@@ -320,6 +317,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.schock.Fuel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -331,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Fuel/Preview Content\"";
@@ -349,6 +348,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.schock.Fuel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

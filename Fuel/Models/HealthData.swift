@@ -9,7 +9,7 @@ import Foundation
 
 struct HealthData {
     var fatPercentage: Float
-    var hoursOfExcercise: Float
+    var hoursOfExcercise: Int
     var weight: Float
     var dietObjective: DietObjective
     
@@ -70,9 +70,9 @@ struct HealthData {
         get {
             var k: Float
             switch hoursOfExcercise {
-            case 0.0..<3.0:
+            case 0..<3:
                 k = 1.2
-            case 3.0..<6.0:
+            case 3..<6:
                 k = 1.35
             default:
                 k = 1.5
@@ -84,7 +84,7 @@ struct HealthData {
     
     
     // MARK: - FUNCTIONS
-    init(weight w: Float = 50.0, fatPercentage fp: Float = 15.0, hoursOfExcercisePerWeek hours: Float = 1.0){
+    init(weight w: Float = 50.0, fatPercentage fp: Float = 15.0, hoursOfExcercisePerWeek hours: Int = 1){
         weight = w
         fatPercentage = fp
         hoursOfExcercise = hours
@@ -95,10 +95,12 @@ struct HealthData {
         let calorieTotal = proteinIntakeObjective + carbIntakeObjective + fatIntakeObjective
         return calorieTotal
     }
+}
+
+enum DietObjective: String, CaseIterable, Identifiable{
+    case cutting
+    case mantaining
+    case bulking
     
-    enum DietObjective{
-        case cutting
-        case mantaining
-        case bulking
-    }
+    var id: String { self.rawValue }
 }
